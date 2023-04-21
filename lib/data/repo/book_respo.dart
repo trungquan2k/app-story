@@ -13,8 +13,6 @@ class BookRepo {
     )
         .then((response) {
       if (response.statusCode == 200) {
-        // final List<dynamic> data = response.data;
-        // return data.map((book) => BookModel.fromJson(book)).toList();
         return response.data;
       }
     }).catchError((e) {

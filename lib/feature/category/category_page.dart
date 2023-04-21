@@ -1,9 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_test/feature/category/home_cubit/home_cubit.dart';
-import 'package:project_test/format/format.dart';
 
 class ViewCategory extends StatefulWidget {
   const ViewCategory({super.key});
@@ -51,7 +48,7 @@ class _ViewCategoryState extends State<ViewCategory> {
                       (columnIndex) {
                         final index = rowIndex * 2 + columnIndex;
                         if (index >= state.listTypeBook.length) {
-                          return Expanded(child: SizedBox());
+                          return const Expanded(child: SizedBox());
                         }
                         return Expanded(
                           child: Container(

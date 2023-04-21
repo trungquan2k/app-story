@@ -29,11 +29,9 @@ class HomeCubit extends Cubit<HomeState> {
     try {
       var result = await service.get();
       final List<dynamic> data = result;
-      print("=======: ${result.runtimeType}");
       listBooks = data.map((book) => BookModel.fromJson(book)).toList();
       endFetching();
     } catch (e) {
-      print(e.toString());
       catchErrors(e.toString());
     }
   }
